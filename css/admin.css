@@ -1,0 +1,85 @@
+.SelectPage
+{
+	font-size: 20px;
+	width: 545px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	font-family: arial;
+	font-weight: bold;
+}
+
+#desc
+{
+	margin-top: 10px;
+	border-radius: 3px;
+	padding: 5px;
+	border: 1px solid gray;
+	font-weight: bold;
+	margin-bottom: 10px;
+	font-family: arial;
+}
+
+#PageProperties
+{
+	border-radius: 3px;
+	width: 184px;
+	border: 1px solid gray;
+	padding: 6px;
+	display: inline-block;
+	vertical-align: top;
+	height: 245px;
+}
+
+.Prob
+{
+	padding: 5px;
+}
+
+#NewPageBox
+{
+	left: 275px;
+	width: 250px;
+	z-index: 1000;
+	background-color: white;
+	border: 1px solid gray;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 250px;
+	font-family: arial;
+	display: none;
+}
+
+#NewPageBox input
+{
+	margin-top: 10px;
+	display: inline;
+	padding: 2px;
+}
+
+#NewWidgetBox
+{
+	width: 660px;
+	z-index: 1000;
+	background-color: white;
+	border: 1px solid gray;
+	padding: 10px;
+	margin-top: 10px;
+	font-family: arial;
+	display: none;
+}
+
+.remove
+{
+	float: right;
+	padding: 2px;
+}
+
+.mtop
+{
+	margin-top: 10px;
+}
+
+textarea
+{
+	border: 1px solid gray;
+}
