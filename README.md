@@ -1,0 +1,1 @@
+PlayerCraft is a web content managment system with focus on minecraft to making it easier for server administrators to have a fast and easy moderated website without having to install heavy CMS such as Drupal.
