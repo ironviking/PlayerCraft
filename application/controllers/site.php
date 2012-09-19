@@ -46,6 +46,8 @@ class site extends CI_Controller {
 
 	public function login()
 	{
+		#Declare variable
+		$data['failure'] = "";
 		#Load the config
 		$this->config->load('user');
 		$username = $this->config->item('user');
@@ -55,11 +57,14 @@ class site extends CI_Controller {
 			if($_POST['username'] == $username && $_POST['password'] == $password){
 				$_SESSION['admin'] = true;
 				header("Location: " .base_url() . 'admin');
+			}else{
+				#Login failed
+				$data['failure'] = "Login failed.";
 			}
 		}
 		if($password == ''){
 				show_error('Empty password is not allowed. Did you forget to set it?');
 			}
-	    $this->load->view('login/login');
+	    $this->load->view('login/login', $data);
 	}
 }
