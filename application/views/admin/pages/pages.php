@@ -21,9 +21,7 @@
         	<input name="action" type="submit" value="Edit" class="button inline">
         	<input name="action" type="submit" value="Delete" class="button inline">
         	<input name="action" type="submit" value="Go" class="button inline">
-        </form>
-        <div id="desc">
-        	<p>Here you can edit and delete existing pages. To visit the page, press the "Go!" button. Or you can create a ...</p>
-        </div>
+        </form><br />
+        <hr><br />
         <a href="#" onclick="NewPage(); return false;" class="button">New page</a>
 	    </div>
