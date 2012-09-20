@@ -132,23 +132,25 @@ class PageDB extends CI_Model {
 		$this->db->query("UPDATE `widgets` SET `title` = '$title',`content` = '$content',`ord` = '$order' WHERE `id` =$id;");
 	}
 	
-	function is_redict($page)
+	function is_redirect($page)
 	{
 		$page = mysql_real_escape_string(str_replace('_', ' ', $page));
-		$query = $this->db->query("SELECT * FROM redicts WHERE page='$page'");
+		$query = $this->db->query("SELECT * FROM redirects WHERE page='$page'");
 		if($query->num_rows() != 0){
-			$href = $this->db->query("SELECT href FROM redicts WHERE page='$page'");
+			$href = $this->db->query("SELECT href FROM redirects WHERE page='$page'");
 			return $href->row('href');
 		}
 	}
 	function install()
 	{
-		#Create pages & widgets table
+		#Create pages,redirects & widgets table
 		$this->db->query("CREATE TABLE `pages` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` varchar(255) NOT NULL,`content` text NOT NULL,`ord` int(11) NOT NULL,`status` int(11) NOT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1");
 		$this->db->query("CREATE TABLE `widgets` ( `id` int(11) NOT NULL AUTO_INCREMENT,`title` varchar(255) NOT NULL, `content` text NOT NULL, `ord` int(11) NOT NULL DEFAULT '5', PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1");
+		$this->db->query("CREATE TABLE `redirects` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `page` varchar(255) NOT NULL,  `href` varchar(255) NOT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1");
 		#Default start page
 		$this->db->query("INSERT INTO `pages` (`id`, `name`, `content`, `ord`, `status`) VALUES (NULL, 'start', '<p>Default start page</p>', '1', '1');");
 		$this->db->query("INSERT INTO `widgets` (`id`, `title`, `content`, `ord`) VALUES (NULL, 'Widget', 'Edit this in the admin panel', '1');");
+	
 	}
 	
 }
