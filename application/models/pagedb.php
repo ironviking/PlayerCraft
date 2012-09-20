@@ -132,6 +132,15 @@ class PageDB extends CI_Model {
 		$this->db->query("UPDATE `widgets` SET `title` = '$title',`content` = '$content',`ord` = '$order' WHERE `id` =$id;");
 	}
 	
+	function is_redict($page)
+	{
+		$page = mysql_real_escape_string(str_replace('_', ' ', $page));
+		$query = $this->db->query("SELECT * FROM redicts WHERE page='$page'");
+		if($query->num_rows() != 0){
+			$href = $this->db->query("SELECT href FROM redicts WHERE page='$page'");
+			return $href->row('href');
+		}
+	}
 	function install()
 	{
 		#Create pages & widgets table
@@ -141,4 +150,5 @@ class PageDB extends CI_Model {
 		$this->db->query("INSERT INTO `pages` (`id`, `name`, `content`, `ord`, `status`) VALUES (NULL, 'start', '<p>Default start page</p>', '1', '1');");
 		$this->db->query("INSERT INTO `widgets` (`id`, `title`, `content`, `ord`) VALUES (NULL, 'Widget', 'Edit this in the admin panel', '1');");
 	}
+	
 }

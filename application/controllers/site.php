@@ -23,6 +23,12 @@ class site extends CI_Controller {
                 # - Initialize "page" model.
                 $this->load->model('pageDB');
 				
+				#Is the page a redict?
+				$redict = $this->pageDB->is_redict($page);
+				if($redict != null){
+					header('Location: '. $redict);
+				}
+				
 				#Is the requested page closed?
 				if($this->pageDB->is_closed($page)){
 					show_404();
