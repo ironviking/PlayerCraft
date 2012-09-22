@@ -7,7 +7,7 @@
     <title><?=$title?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 	<link href="<?=$url?>css/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="icon" type="image/png" href="images/favicon.png">
 	<META NAME="Description" CONTENT="<?=$site_description?>">
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 </head>
