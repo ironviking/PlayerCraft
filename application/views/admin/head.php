@@ -9,10 +9,8 @@
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
    <SCRIPT language="JavaScript">
    function fixie(){if (browserName=navigator.appName=="Microsoft Internet Explorer"){document.body.style.background = '#80B5FE';}}
-   function NewPage(){document.getElementById('NewPageBox').style.display='block';}
-   function NoNewPage(){document.getElementById('NewPageBox').style.display='none';}
-   function NewWidget(){document.getElementById('NewWidgetBox').style.display='block';}
-   function NoNewWidget(){document.getElementById('NewWidgetBox').style.display='none';}
+   function NewBox(){document.getElementById('NewBox').style.display='block';}
+   function NoNewBox(){document.getElementById('NewBox').style.display='none';}
    </SCRIPT>
 
 </head>

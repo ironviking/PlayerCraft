@@ -89,7 +89,7 @@ class Admin extends CI_Controller {
 	
 		#Anything todo?
 		if(isset($_POST['title'])){ #Add a new widget?
-			$this->pageDB->AddWidget($_POST['title'], $_POST['content']);
+			$this->pageDB->AddWidget($_POST['title'], 'Widget content');
 		}
 		if(isset($_GET['action'])){
 			if($_GET['action'] == 'delete'){ #Delete a widget?

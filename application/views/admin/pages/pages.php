@@ -1,11 +1,10 @@
         	    <!-- New page box (hidden default)-->
-        	<div id="NewPageBox">
+        	<div id="NewBox">
         		<form action="" method="get">
         		<h5>New page</h5>
-        		<hr>
 				<input type="text" name="page" placeholder="Page name">
 				<input type="submit" name="action" value="Create">
-				 <a onclick="NoNewPage(); return false;" href="#"><input type="button" value="cancel"></a>
+				 <a onclick="NoNewBox(); return false;" href="#"><input type="button" value="cancel"></a>
 				</form> 
 			</div>
 			<!-- Annat -->
@@ -24,5 +23,5 @@
         	<input name="action" type="submit" value="Go" class="button inline">
         </form><br />
         <hr><br />
-        <a href="#" onclick="NewPage(); return false;" class="button">New page</a>
+        <a href="#" onclick="NewBox(); return false;" class="button">New page</a>
 	    </div>

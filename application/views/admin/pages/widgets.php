@@ -1,10 +1,9 @@
-<div id="NewWidgetBox">
+<div id="NewBox">
 	<h3>New widget</h3>
 	<form action="" method="POST">
-		<textarea name="content" cols="75" rows="5"></textarea>
 		<input name="title" type="text" placeholder="Title">
 		<input type="submit" style="width: 100px; height: 24px;" value="Save">
-		<input type="button" onclick="NoNewWidget(); return false;" style="width: 100px; height: 24px;" value="Cancel">
+		<input type="button" onclick="NoNewBox(); return false;" style="width: 100px; height: 24px;" value="Cancel">
 	</form>
 </div>
 <div id="content">
@@ -19,5 +18,5 @@
 	?>
 	
 	<br>
-		<a class="button" onclick="NewWidget(); return false;" href="#">New widget</a>
+		<a class="button" onclick="NewBox(); return false;" href="#">New widget</a>
 </div>

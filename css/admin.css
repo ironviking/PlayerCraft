@@ -35,7 +35,7 @@
 	padding: 5px;
 }
 
-#NewPageBox
+#NewBox
 {
 	left: 275px;
 	width: 250px;
@@ -49,23 +49,11 @@
 	display: none;
 }
 
-#NewPageBox input
+#NewBox input
 {
 	margin-top: 10px;
 	display: inline;
 	padding: 2px;
-}
-
-#NewWidgetBox
-{
-	width: 660px;
-	z-index: 1000;
-	background-color: white;
-	border: 1px solid gray;
-	padding: 10px;
-	margin-top: 10px;
-	font-family: arial;
-	display: none;
 }
 
 .remove
