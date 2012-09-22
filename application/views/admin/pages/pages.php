@@ -1,10 +1,11 @@
         	    <!-- New page box (hidden default)-->
         	<div id="NewPageBox">
         		<form action="" method="get">
-        		<h5>New page  <a onclick="NoNewPage(); return false;" href="#">[X]</a></h5>
+        		<h5>New page</h5>
         		<hr>
 				<input type="text" name="page" placeholder="Page name">
 				<input type="submit" name="action" value="Create">
+				 <a onclick="NoNewPage(); return false;" href="#"><input type="button" value="cancel"></a>
 				</form> 
 			</div>
 			<!-- Annat -->
