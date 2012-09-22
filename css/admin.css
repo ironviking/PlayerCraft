@@ -83,3 +83,19 @@ textarea
 {
 	border: 1px solid gray;
 }
+
+.editor-notice
+{
+	display: block;
+	width: 620px;
+	margin: auto;
+	background-color: green;
+	text-align: center;
+	margin-bottom: 15px;
+	padding: 2px;
+	color: white;
+}
+.editor-notice a
+{
+	color: blue;
+}

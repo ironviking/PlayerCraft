@@ -101,6 +101,7 @@ class PageDB extends CI_Model {
 			$order = 10;
 		}
 		$this->db->query("UPDATE pages SET `name` = '$name', `content` = '$content', `ord` = '$order', `status` = '$status' WHERE name = '$page';");
+		return true;
 		if($page != $name){
 			header('location: '. base_url() .'admin');
 		}

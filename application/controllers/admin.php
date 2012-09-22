@@ -61,7 +61,12 @@ class Admin extends CI_Controller {
 		#Anything happend? 
 		if(isset($_POST['action']))
 		{
-			$this->pageDB->updatePage($page, $_POST['name'], $_POST['content'], $_POST['order'], $_POST['status']);
+			$update = $this->pageDB->updatePage($page, $_POST['name'], $_POST['content'], $_POST['order'], $_POST['status']);
+			if(!$update){
+				$data['notice'] = "Page didn't save";
+			}else{
+				$data['notice'] = 'Page updated! <a target="__blank" href="'. base_url() . $page . '">[view]</a>';
+			}
 		}
 		
 		#Get data

@@ -25,6 +25,13 @@ switch($pageContent['status'])
 ?>
 
 <div id="content">
+	<?php
+	if(isset($notice)){
+		echo '<div class="editor-notice">';
+		echo '<p style="color: white;">' . $notice . '</p>';
+		echo '</div>';
+	}
+	?>
 	<form method="post" action"">
 	<textarea style="resize: none; height: 257px; width: 415px;" name="content" wrap="off" rows="15" cols="50"><?=$pageContent['source']?></textarea>
 		<div id="PageProperties">
