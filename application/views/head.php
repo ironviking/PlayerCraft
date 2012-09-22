@@ -12,7 +12,7 @@
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 </head>
 <!-- Body -->
-<body onload="fix();">
+<body>
 	<div id="page">
 		<div id="logo">
 			<a href="<?=$url?>"><img src="<?=$url?>images/logo.png" alt="Logo"></a>
