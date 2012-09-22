@@ -63,7 +63,7 @@ class Admin extends CI_Controller {
 		{
 			$update = $this->pageDB->updatePage($page, $_POST['name'], $_POST['content'], $_POST['order'], $_POST['status']);
 			if(!$update){
-				$data['notice'] = "Page didn't save";
+				$data['notice'] = "Page did not update. (Does the name already exists?)";
 			}else{
 				$data['notice'] = 'Page updated! <a target="__blank" href="'. base_url() . $page . '">[view]</a>';
 			}
