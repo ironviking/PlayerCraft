@@ -89,11 +89,15 @@ class PageDB extends CI_Model {
 	
 	function updatePage($page, $name, $content, $order, $status)
 	{	
-			$page = mysql_real_escape_string(str_replace('_', ' ', $page));
-			$page = mysql_real_escape_string($page);
-			$content = mysql_real_escape_string($content);
-			$order = mysql_real_escape_string($order);
-			$status = mysql_real_escape_string($status);
+			$page	 =	 mysql_real_escape_string(str_replace('_', ' ', $page));
+			$page	 = 	 mysql_real_escape_string($page);
+			$name    = 	 mysql_real_escape_string($name);
+			$content = 	 mysql_real_escape_string($content);
+			$order 	 = 	 mysql_real_escape_string($order);
+			$status  = 	 mysql_real_escape_string($status);
+			if($page = 'start' or 'Start'){
+				return false;
+			}
 			switch($status)
 			{
 				case 'open':
@@ -119,10 +123,11 @@ class PageDB extends CI_Model {
 				$order = 10;
 			}
 			$this->db->query("UPDATE pages SET `name` = '$name', `content` = '$content', `ord` = '$order', `status` = '$status' WHERE name = '$page';");
-			return true;
 			if($page != $name){
-				header('location: '. base_url() .'admin');
+				header('location: '. base_url() .'admin/edit/' . $name);
 			}
+			return true;
+
 	}
 	
 	function addWidget($title, $content)
