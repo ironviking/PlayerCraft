@@ -2,7 +2,7 @@
         	<div id="NewBox">
         		<form action="" method="get">
         		<h5>New page</h5>
-				<input type="text" name="page" placeholder="Page name">
+				<input type="text" required name="page" placeholder="Page name"><br>
 				<input type="submit" name="action" value="Create">
 				 <a onclick="NoNewBox(); return false;" href="#"><input type="button" value="cancel"></a>
 				</form> 
