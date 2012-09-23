@@ -95,7 +95,7 @@ class PageDB extends CI_Model {
 			$content = 	 mysql_real_escape_string($content);
 			$order 	 = 	 mysql_real_escape_string($order);
 			$status  = 	 mysql_real_escape_string($status);
-			if($page = 'start' or 'Start'){
+			if($page == 'start' or $page == 'Start'){
 				return false;
 			}
 			switch($status)
