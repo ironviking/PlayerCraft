@@ -24,7 +24,8 @@ switch($pageContent['status'])
 
 ?>
 
-<div id="content">
+<section>
+	<h2>Edit page</h2>
 	<?php
 	if(isset($notice)){
 		echo '<div class="editor-notice">';
@@ -54,8 +55,8 @@ switch($pageContent['status'])
 	</div>
 	<div class="mtop">
 		<input type="submit" class="button" name="action" value="Save">
-		<a href="<?=base_url()?>admin" class="button">Cancel</a>
+		<a href="<?=base_url()?>admin"><input type="button" value="Cancel"></a>
 		</form>
 	</div>
-</div>
+</section>
 

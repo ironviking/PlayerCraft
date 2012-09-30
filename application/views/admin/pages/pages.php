@@ -8,20 +8,24 @@
 				</form> 
 			</div>
 			<!-- Annat -->
-        <div id="content">
+        <section>
+                <h2>Pages</h2>
+                <hr>
         	<form action="" method="GET">
-        	<select name="page" class="SelectPage">
+        	<select name="page" style="min-width: 250px;">
         		<?php
         			foreach($pages->result() as $page)
 					{
 						echo "<option name=" . $page->name . "\">" . $page->name . "</option>";
 					}
         		?>
-        	</select><br>
+        	</select>
         	<input name="action" type="submit" value="Edit" class="button inline">
         	<input name="action" type="submit" value="Delete" class="button inline">
         	<input name="action" type="submit" value="Go" class="button inline">
-        </form><br />
-        <hr><br />
-        <a href="#" onclick="NewBox(); return false;" class="button">New page</a>
-	    </div>
+                <blockquote>
+                          <p>Here you can edit and delete existing pages. To visit the page, press the "Go!" button. To create a new page press "New page" </p>
+                </blockquote>
+        </form>
+        <a href="#" onclick="NewBox(); return false;"><button>New page</button></a>
+</section>

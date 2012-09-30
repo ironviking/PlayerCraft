@@ -6,7 +6,9 @@
 		<input type="button" onclick="NoNewBox(); return false;" style="width: 100px; height: 24px;" value="Cancel">
 	</form>
 </div>
-<div id="content">
+<section>
+	<h2>Widgets</h2>
+	<hr>
 	<h3>Current widgets (<?=$widgets->num_rows()?>)</h3>
 	<?php
 	foreach($widgets->result() as $widget){
@@ -18,5 +20,5 @@
 	?>
 	
 	<br>
-		<a class="button" onclick="NewBox(); return false;" href="#">New widget</a>
-</div>
+		<a onclick="NewBox(); return false;" href="#"><button>New widget</button></a>
+</section>

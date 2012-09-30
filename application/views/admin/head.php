@@ -1,24 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html LANG="EN">
+<!doctype html>
+<html>
+
 <head>
-    <title>PlayerCraft - Admin</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="<?=base_url()?>css/admin.css" rel="stylesheet"> 
-	<link href="<?=base_url()?>css/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png" href="favicon.png">
-    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <title>PlayerCraft | Admin</title>
+  <link rel="stylesheet" href="<?=base_url()?>css/admin.css">
+
    <SCRIPT language="JavaScript">
    function fixie(){if (browserName=navigator.appName=="Microsoft Internet Explorer"){document.body.style.background = '#80B5FE';}}
    function NewBox(){document.getElementById('NewBox').style.display='block';}
    function NoNewBox(){document.getElementById('NewBox').style.display='none';}
    </SCRIPT>
-
 </head>
-<body onload="fixie();">
-<script src="js/cst.js" type="javascript/text"></script>
-<img src="<?=base_url()?>images/sun.png" class="sun">
-	<div id="page">
-		<div id="container">
-			<div id="logo">
-				<a href="<?=base_url()?>"><img src="<?=base_url()?>images/adm_logo.png"></a>
-			</div>
+
+<body>
+
+<header class="black-gradient">
+  <a href="<?=base_url()?>admin"> <img src="<?=base_url()?>images/admin/playercraft-logo.png" style="margin-left: 7px; float: left;"/></a>
+  <nav>
+    <ul>
+      <li> <a href="<?=base_url()?>admin">Pages</a></li>
+      <li><a href="<?=base_url()?>admin/widgets">Widgets</li>
+      <li><a href="<?=base_url()?>admin/misc">Misc<a/></li>
+    </ul>
+  </nav>
+</header>
