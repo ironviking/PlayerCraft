@@ -180,5 +180,25 @@ class PageDB extends CI_Model {
 			$this->db->query("INSERT INTO `widgets` (`id`, `title`, `content`, `ord`) VALUES (NULL, 'Widget', 'Edit this in the admin panel', '1');");
 	
 	}
+	function get_redirects()
+	{
+		$redirects = $this->db->query("SELECT * FROM redirects");
+		if($redirects->num_rows() == 0){
+			$redirects = false;
+		}
+		return $redirects; 
+	}
+	function remove_redirect($id)
+	{
+		$id = mysql_real_escape_string($id);
+		$this->db->query("DELETE FROM redirects WHERE id=$id");
+	}
+	function NewRedirect($page, $to)
+	{
+		$page = mysql_real_escape_string($page);
+		$to   = mysql_real_escape_string($to);
+
+		$this->db->query("INSERT INTO `playercraft`.`redirects` (`id`, `page`, `href`) VALUES (NULL, '$page', '$to');");
+	}
 	
 }

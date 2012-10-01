@@ -12,9 +12,30 @@ class Admin extends CI_Controller {
 		#Initilize models (pageDB)
 		$this->load->model('pageDB');
 		
+		#Get redirects
+		$data['redirects'] = $this->pageDB->get_redirects();
+
 		#Anything happend?
+		if(isset($_GET['action'])){
+			if($_GET['action'] == 'rmr')
+				{
+					if(isset($_GET['id'])){
+						if(!is_numeric($_GET['id'])){
+							exit('Id may only be numeric');
+						}else {
+							$this->pageDB->remove_redirect($_GET['id']);
+							header('location: ' . base_url() . 'admin');
+						}
+					}
+
+				}
+			}
+
 		if(isset($_GET['page']))
 		{
+			if(isset($_GET['to'])){
+				$this->pageDB->NewRedirect($_GET['page'], $_GET['to']);
+			}
 			if(isset($_GET['action']))
 			{
 				if($_GET['action'] == 'Edit')

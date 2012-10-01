@@ -210,3 +210,33 @@ padding: 5px;
 a {
 	text-decoration: none;
 }
+
+/* Table */
+
+table td {
+	padding: 5px;
+	text-align: left;
+	min-width: 125px;
+}
+
+table th {
+	font-weight: bold;
+	font-size: 1.1em;
+	text-align: left;
+	min-width: 125px;
+}
+
+/* New redirect */
+#NewRedirect
+{
+	left: 275px;
+	width: 250px;
+	z-index: 1000;
+	background-color: white;
+	border: 1px solid gray;
+	padding: 10px;
+	margin: auto;
+	margin-top: 10px;
+	font-family: arial;
+	display: none;
+}

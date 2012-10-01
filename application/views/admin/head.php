@@ -10,6 +10,8 @@
    function fixie(){if (browserName=navigator.appName=="Microsoft Internet Explorer"){document.body.style.background = '#80B5FE';}}
    function NewBox(){document.getElementById('NewBox').style.display='block';}
    function NoNewBox(){document.getElementById('NewBox').style.display='none';}
+   function NoRedirect(){document.getElementById('NewRedirect').style.display='none';}
+   function NewRedirect(){document.getElementById('NewRedirect').style.display='block';}
    </SCRIPT>
 </head>
 
