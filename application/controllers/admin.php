@@ -35,6 +35,7 @@ class Admin extends CI_Controller {
 		{
 			if(isset($_GET['to'])){
 				$this->pageDB->NewRedirect($_GET['page'], $_GET['to']);
+				header('location:' . base_url() . 'admin');
 			}
 			if(isset($_GET['action']))
 			{
@@ -43,7 +44,7 @@ class Admin extends CI_Controller {
 					header('location: ' . base_url() .'admin/edit/' . str_replace(' ','_',$_GET['page']));
 				}
 				
-				if($_GET['action'] == 'Create')
+				if($_GET['action'] == 'Create' && !isset($_GET['to']))
 				{
 					$this->pageDB->addPage($_GET['page']);
 					header('location: ' . base_url() . 'admin');
