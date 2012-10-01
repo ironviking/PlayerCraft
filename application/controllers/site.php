@@ -25,8 +25,9 @@ class site extends CI_Controller {
 				
 				#Is the page a redirect?
 				$redirect = $this->pageDB->is_redirect($page);
+
 				if($redirect != null){
-					header('Location: '. $redirects);
+					header('Location: '. $redirect);
 				}
 				
 				#Is the requested page closed?
