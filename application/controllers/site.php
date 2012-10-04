@@ -61,6 +61,9 @@ class site extends CI_Controller {
 			$this->config->load('user');
 			$username = $this->config->item('user');
 			$password = $this->config->item('password');
+			if($password == ''){
+					show_error('Empty password is not allowed. Did you forget to set it?');
+			}
 			#Is the user trying to login?
 			if(isset($_POST['password']) && isset($_POST['username'])){
 				if($_POST['username'] == $username && $_POST['password'] == $password){
@@ -71,9 +74,6 @@ class site extends CI_Controller {
 					$data['failure'] = "Login failed.";
 				}
 			}
-			if($password == ''){
-					show_error('Empty password is not allowed. Did you forget to set it?');
-				}
 			$this->load->view('login/login', $data);
 		}
 }
