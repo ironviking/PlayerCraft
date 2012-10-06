@@ -220,3 +220,22 @@ p{
 	font-style: italic;
 	padding: 5px;
 }
+
+/* Players class */
+
+.players {
+	background-color: #fff;
+	display: block;
+	min-height: 50px;
+	max-height: 250px;
+	width: 240px;
+	padding: 4px;
+	margin: 5px;
+	overflow: auto;
+}
+
+.players li {
+	margin-left: 20px;
+	font-family: arial;
+	list-style-image: url(../images/online-icon.png);
+}
