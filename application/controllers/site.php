@@ -4,8 +4,9 @@ class site extends CI_Controller {
 
 	public function index($page = null)
 	{
-				#Load site configuration
+				#Load site configuration(s)
 				$this->load->config('site');
+				$this->load->config('ServerQuery');
 				$data['title'] = $this->config->item('title');
 				$data['site_description'] = $this->config->item('description');
 				
@@ -35,22 +36,53 @@ class site extends CI_Controller {
 					show_404();
 				}
 				
+				#Server query!
+				if($this->config->item('QueryServer')){
+					$data['ServerData'] = $this->queryServer($this->config->item('server_ip'), $this->config->item('query_port'));
+					$data['query_server'] = TRUE;
+				}else{
+					$data['query_server'] = FALSE;
+				}
+
 				#Does the page even exists?
 				if(!$this->pageDB->page_exists($page)){
 					show_404();
 				}
 				
                 # - Load page data
-                 $data['menuItems'] = $this->pageDB->getMenuItems();
-                 $data['pageContent'] = $this->pageDB->getPageContent($page);
-                 $data['widgets']  = $this->pageDB->getWidgets($page);
+                 $data['menuItems'] 	= 	$this->pageDB->getMenuItems();
+                 $data['pageContent'] 	= 	$this->pageDB->getPageContent($page);
+                 $data['widgets']  		=	$this->pageDB->getWidgets($page);
 
 		        # - Load Views {head, navigation, page, sidebar, end}
-				$this->load->view('head', $data);
+				$this->load->view('head', 		$data);
 				$this->load->view('navigation', $data);
 				$this->load->view('page');
-				$this->load->view('sidebar', $data);
+				$this->load->view('sidebar', 	$data);
 				$this->load->view('end');
+	}
+
+	#Query server
+	public function queryServer($server, $port){
+		$this->load->library('MinecraftQuery');
+
+		try{
+
+			#Connect
+			$this->minecraftquery->Connect($server, $port);
+
+			#Get online players
+			$ServerData['online_players'] = $this->minecraftquery->GetPlayers();
+			
+			#Count players
+			$ServerData['numplayers'] = count($ServerData['online_players']);
+		}
+		catch( MinecraftQueryException $e){
+			#Couldn't connect
+			$ServerData['players'] 		=	 'N/A';
+			$ServerData['numplayers']	= 	 'N/A';
+		}
+		return $ServerData;
 	}
 
 	public function login()

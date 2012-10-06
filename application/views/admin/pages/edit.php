@@ -26,6 +26,7 @@ switch($pageContent['status'])
 
 <section>
 	<h2>Edit page</h2>
+	<hr>
 	<?php
 	if(isset($notice)){
 		echo '<div class="editor-notice">';
@@ -34,7 +35,7 @@ switch($pageContent['status'])
 	}
 	?>
 	<form method="post" action"">
-	<textarea style="resize: none; height: 257px; width: 415px;" name="content" wrap="off" rows="15" cols="50"><?=$pageContent['source']?></textarea>
+	<textarea style="resize: none; height: 257px; width: 420px;" name="content" wrap="off" rows="15" cols="54"><?=$pageContent['source']?></textarea>
 		<div id="PageProperties">
 		<h4>Properties</h4>
 		<hr><br />
