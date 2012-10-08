@@ -172,8 +172,8 @@ class PageDB extends CI_Model {
 	function install()
 	{
 			#Create pages,redirects & widgets table
-			$this->db->query("CREATE TABLE `pages` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` varchar(255) NOT NULL,`content` text NOT NULL,`ord` int(11) NOT NULL,`status` int(11) NOT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1");
-			$this->db->query("CREATE TABLE `widgets` ( `id` int(11) NOT NULL AUTO_INCREMENT,`title` varchar(255) NOT NULL, `content` text NOT NULL, `ord` int(11) NOT NULL DEFAULT '5', PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1");
+			$this->db->query("CREATE TABLE `pages` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,  `content` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,  `ord` int(11) NOT NULL,  `status` int(11) NOT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1");
+			$this->db->query("CREATE TABLE `widgets` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,  `content` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,  `ord` int(11) NOT NULL DEFAULT '5',  PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1");
 			$this->db->query("CREATE TABLE `redirects` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `page` varchar(255) NOT NULL,  `href` varchar(255) NOT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1");
 			#Default start page
 			$this->db->query("INSERT INTO `pages` (`id`, `name`, `content`, `ord`, `status`) VALUES (NULL, 'start', '<p>Default start page</p>', '1', '1');");
@@ -198,7 +198,7 @@ class PageDB extends CI_Model {
 		$page = mysql_real_escape_string($page);
 		$to   = mysql_real_escape_string($to);
 
-		$this->db->query("INSERT INTO `playercraft`.`redirects` (`id`, `page`, `href`) VALUES (NULL, '$page', '$to');");
+		$this->db->query("INSERT INTO `redirects` (`id`, `page`, `href`) VALUES (NULL, '$page', '$to');");
 	}
 	
 }
