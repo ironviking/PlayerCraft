@@ -10,6 +10,6 @@
 	$config['site_name'] = 'PlayerCraft.net';
 
 	// custom php pages
-	$config['enable_custom_php'] = true;
+	$config['enable_custom_php'] = true;     // <- Not currently used
 	//Gallery location
-	$config['gallery_location'] = 'gallery';
+	$config['gallery_location'] = 'gallery'; // <- Not currently used
