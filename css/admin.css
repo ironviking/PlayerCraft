@@ -1,0 +1,312 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h1,h2,h3,h4,h5 { font-weight: bold; }
+
+h1 { font-size: 3em;}
+h2 { font-size: 2.5em;}
+h3 { font-size: 2em;}
+h4 { font-size: 1.3em;}
+h5 { font-size: 1em;}
+
+body {
+	background-image: url(../img/admin/minecraft.jpg);
+	background-color: #333333;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+header {
+	display: block;
+	background-color: #7f0000;
+	background-image: url(../img/admin/dirt.png);
+	height: 45px;
+	background-position: bottom;
+	box-shadow: 0px 2px 2px #000;
+	padding-right: 25px;
+}
+
+a {
+	color: blue;
+}
+
+header img {
+	padding: 5px;
+	padding-top: -12;
+}
+
+header nav {
+	float: right;
+	padding-top: 12px;
+}
+
+header li {
+	display: inline;
+	list-style: none;
+	font-family: arial;
+	color: white;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+header a {
+	text-decoration: none;
+	color: white;
+}
+
+header a:hover {
+	text-decoration: underline;
+}
+
+.content {
+	width: 650px;
+	margin: auto;
+	margin-top: 50px;
+	border: 1px solid gray;
+	box-shadow: 2px 2px 4px black;
+	padding-bottom: -5px;
+}
+
+.section-content {
+	background-color: white;
+	min-height: 400px;
+	background-image: url(../img/admin/creeper.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	z-index: -5000;
+	border-top: 1px solid gray;
+}
+
+.section-title {
+	text-transform: uppercase;
+	font-family: arial;
+	color: gray;
+	background-color: black;
+	opacity: 0.7;
+	padding: 5px;
+	clear: both;
+	background-image: url(../img/admin/opacity-black-60.png);
+}
+
+.section-title a {
+	text-decoration: none;
+	color: white;
+	letter-spacing: 1.5px;
+	float: right;
+}
+
+.select-page {
+	width: 640px;
+	font-size: 1.2em;
+	text-align: center;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+/*  button */
+
+.button{
+	display: inline-block;
+	padding: 6px;
+	border: 3px solid black;
+	background-image: url(../img/admin/button_bg.png);
+	margin-top: auto;
+	padding-top: 9px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	font-family: arial;
+	margin-bottom: 3px;
+	text-transform: uppercase;
+	font-size: 15px;
+	cursor: default;
+	text-decoration: none;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.button:hover
+{
+	background-image: url(../img/admin/button_hover.png);
+}
+
+.page-table {
+	width: 650px;
+	margin: auto;
+	font-family: arial;
+}
+
+.page-table table {
+	border-collapse: collapse;
+
+}
+
+.page-table  tr{
+	padding: 2px;
+}
+
+.page-table  th {
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: arial;
+}
+
+.page-table  td img{
+	padding: 4px;
+	padding-bottom: 0px;
+}
+
+.page-table  td {
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+.page-table a {
+	font-weight: bold;
+	text-decoration: none;
+	color: blue;
+}
+
+#editor { 
+    width: 450px;
+    opacity: 0.9;
+    height: 400px;
+}
+
+#properties {
+	width: 190px;
+	float: right;
+	font-family: arial;
+}
+
+.text-input {
+	width: 150px;
+}
+
+
+ article {
+	display: block;
+	border: 2px solid gray;
+	border-radius: 7px 7px 4px 4px;
+	background-color: white;
+	font-family: arial;
+	margin: 25px;
+	margin-bottom: 0px;
+}
+
+article h4{
+	display: block;
+	background-image: url('../img/admin/dirt.png');
+	padding: 5px;
+	border-radius: 5px 5px 0px 0px;
+	letter-spacing: 2px;
+	color: white;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.widget-edit-box {
+	border: 2px solid gray;
+	border-radius: 0px 0px 7px 7px;
+	background-color: white;
+	width: 50px;
+	margin: auto;
+	margin-bottom: 0px;
+	border-top: 0px;
+	padding: 5px;
+}
+
+ article p {
+	padding: 3px;
+}
+
+
+.textbox-100px{
+	width: 100px;
+	text-align: center;
+	padding: 3px;
+}
+
+.new-widget-form label {
+	font-family: arial;
+}
+
+.new-widget-form p {
+	font-family: arial;
+}
+
+
+/* Blogging */
+
+.blog_post{
+	margin: 10px;
+	background-color: #EEE8AA;
+	box-shadow: 2px 2px 2px black;
+	padding: 10px;
+	font-family: arial;
+}
+
+.blog_post h4 {
+	display: inline;
+}
+
+.blog-post-time {
+	display: inline;
+	font-size: 10px;
+	font-style: italic;
+}
+
+/* Misc */
+
+.back-to-site a{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: white;
+	color: blue;
+	font-weight: bold;
+	color: green;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size:  14px;
+	padding: 5px;
+	text-decoration: none;
+	font-family: arial;
+	margin-top: 250px;
+}
+
+.post-editor-form {
+	font-family: arial;
+	padding: 15px;
+}
+
+.post-editor-form p{
+	display: inline;
+}
+
+.post-editor-form textarea {
+	width: 615px;
+	height: 200px;
+}

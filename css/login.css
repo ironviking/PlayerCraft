@@ -1,0 +1,114 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h1,h2,h3,h4,h5 { font-weight: bold; }
+
+h1 { font-size: 3em;}
+h2 { font-size: 2.5em;}
+h3 { font-size: 2em;}
+h4 { font-size: 1.3em;}
+h5 { font-size: 1em;}
+
+body {
+	background-image: url(../img/admin/minecraft.jpg);
+	background-color: #333333;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: arial;
+}
+
+#login-box {
+	width: 450px;
+	height: 250px;
+	margin: auto;
+	margin-top: 150px;
+	background-color: white;
+	box-shadow: 2px 2px 2px black;
+	border: 1px solid gray;
+}
+
+form {
+	width: 250px;
+	margin: auto;
+}
+
+.textbox {
+	border: 2px solid gray;
+	padding: 3px;
+	width: 250px;
+	border-radius: 5px;
+}
+
+h4 {
+	background-image: url(../img/admin/dirt.png);
+	height: 24px;
+	color: white;
+	padding-top: 2px;
+	vertical-align: top;
+	font-size: 20px;
+	border-bottom: 1px solid gray;
+}
+
+p {
+	font-family: arial;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*  button */
+
+.button{
+	display: inline-block;
+	padding: 6px;
+	border: 3px solid black;
+	background-image: url(../img/admin/button_bg.png);
+	margin-top: auto;
+	padding-top: 9px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	font-family: arial;
+	margin-bottom: 3px;
+	text-transform: uppercase;
+	font-size: 15px;
+	cursor: default;
+	text-decoration: none;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+h4 img {
+	display: inline;
+}
+.button:hover
+{
+	background-image: url(../img/admin/button_hover.png);
+}
+
+.version {
+	margin-top: 33px;
+}
+
+.version a {
+	text-decoration: none;
+	font-size: 9px;
+}
