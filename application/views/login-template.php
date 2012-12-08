@@ -17,9 +17,9 @@
 <br>
 	<form name="login" method="POST" action="">
 		<p>Username:</p>
-		<input <?if(isset($fail)){echo 'style="background-color: red;";}';}?> class="textbox" type="text" name="username">
+		<input class="textbox" type="text" name="username">
 		<p>Password:</p>
-		<input <?if(isset($fail)){echo 'style="background-color: red;";}';}?> class="textbox" type="password" name="password">
+		<input class="textbox" type="password" name="password">
 		<br><input class="button" style="width: 250px; margin-top: 10px;" type="submit" value="login">
 	</form>
 	<p class="version"> v.<?=$version?></p>
