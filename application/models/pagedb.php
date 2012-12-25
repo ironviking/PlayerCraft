@@ -108,7 +108,7 @@ class Pagedb extends CI_Model {
     function addBlogPost($title) {
         $title = $this->fortknox->escape( $title );
 
-        $this->db->query("INSERT INTO `playercraft`.`blog_posts` (`id`, `title`, `content`, `by`, `time`) VALUES (NULL, '$title', '', 'admin', '".time()."');");
+        $this->db->query("INSERT INTO `blog_posts` (`id`, `title`, `content`, `by`, `time`) VALUES (NULL, '$title', '', 'admin', '".time()."');");
     }
 
     function addPage( $name ){
