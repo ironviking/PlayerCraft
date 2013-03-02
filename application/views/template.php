@@ -1,5 +1,6 @@
-<?/* PlayerCraft 2.0 default template */?>
-	<?php $url = base_url() ?>
+<?/* PlayerCraft 2.0 default template */
+	$url = base_url() 
+?>
 
 <!doctype html>
 
