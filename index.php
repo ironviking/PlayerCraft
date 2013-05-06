@@ -122,6 +122,17 @@ if (defined('ENVIRONMENT'))
  */
 	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
+/*
+ * --------------------------------------------------------------------
+ *  PHP SHORT_OPEN_TAG
+ * --------------------------------------------------------------------
+ */
+	// Check if short_open_tags are already enabled
+	if (!ini_get("short_open_tag"))
+	{
+		// Enable short_open_tags
+		ini_set("short_open_tag", true);
+	}
 
 
 // --------------------------------------------------------------------
