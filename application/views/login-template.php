@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="<?=base_url()?>css/login.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css">
 	<title>PlayerCraft » Login</title>
 </head>
 
@@ -22,7 +22,7 @@
 		<input class="textbox" type="password" name="password">
 		<br><input class="button" style="width: 250px; margin-top: 10px;" type="submit" value="login">
 	</form>
-	<p class="version"> v.<?=$version?></p>
+	<p class="version"> v.<?php echo $version; ?></p>
 
 </div>
 

@@ -51,7 +51,7 @@
 	}
 ?>
 
-<h4 class="section-title">Edit page <a href="<?=base_url() . fix($page['name'])?>">[<?=$page['name']?>]</a></h4>
+<h4 class="section-title">Edit page <a href="<?php echo base_url() . fix($page['name']); ?>">[<?php echo $page['name']; ?>]</a></h4>
 <section class="section-content">
 <form name="save" action="" method="POST">
 
@@ -60,34 +60,34 @@
 	<div id="properties">
 	<!-- NAME --><br>
 	<h4> Name </h4>
-	<input name="name" class="text-input" type="text" value="<?=$page['name']?>">
+	<input name="name" class="text-input" type="text" value="<?php echo $page['name']; ?>">
 	
 	<!-- TYPE -->
 	<h4> Type </h4>
 	<select name="type" class="text-input">
-		<?=$page['type']?>
+		<?php echo $page['type']; ?>
 	</select>
 
 	<!-- STATUS -->
 	<h4> Status</h4>
 	<select name="status" class="text-input">
-		<?=$page['status']?>
+		<?php echo $page['status']; ?>
 	</select>
 
 	<!-- PAGE ORDER -->
 	<h4>Page order</h4>
-	<input name="order" type="text" class="text-input" value="<?=$page['order']?>">
+	<input name="order" type="text" class="text-input" value="<?php echo $page['order']; ?>">
 
 	<br><br>
 	<input type="submit" class="button text-input" value="update">
-	<a href="<?=base_url()?>admin">
+	<a href="<?php echo base_url(); ?>admin">
 		<input type="button" class="button text-input" value="cancel">
 	</a>
 	</div>
 	    
 	<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Hidden textarea -->
-	<textarea style="display: none" name="data"><?=$page['data'];?></textarea>
+	<textarea style="display: none" name="data"><?php echo $page['data'];; ?></textarea>
 
 </form>
 
