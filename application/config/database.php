@@ -6,7 +6,7 @@ $active_record = TRUE;
 
 
 
-/* EDIT THIS SETTINGS */
+/* EDIT THESE SETTINGS */
 $db['default']['hostname'] = 'localhost'; 
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
