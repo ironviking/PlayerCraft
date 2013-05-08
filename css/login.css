@@ -33,82 +33,71 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: arial;
+    text-color: red;
 }
 
-#login-box {
-	width: 450px;
-	height: 250px;
-	margin: auto;
-	margin-top: 150px;
-	background-color: white;
-	box-shadow: 2px 2px 2px black;
-	border: 1px solid gray;
+
+#box{
+    background: #fff;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow: 0px 0px 5px black;
+    border: 1px solid gray;
+}
+
+#box-top{
+    padding: 5px;
+    margin: -4px;
+    border-radius: 4px 4px 0px 0px;
+    margin-bottom: 15px;
+}
+
+.logo{
+    display: block;
+    margin: auto;
+}
+
+.text-input{
+    border: 0px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 4px;
+    width: 200px;
+}
+
+.label {
+    margin-top: 15px;
+    font-width: bold;
+    color: #222;
+    font-weight: bold;
 }
 
 form {
-	width: 250px;
-	margin: auto;
+    width: 200px;
+    margin: auto;
 }
-
-.textbox {
-	border: 2px solid gray;
-	padding: 3px;
-	width: 250px;
-	border-radius: 5px;
-}
-
-h4 {
-	background-image: url(../img/admin/dirt.png);
-	height: 24px;
-	color: white;
-	padding-top: 2px;
-	vertical-align: top;
-	font-size: 20px;
-	border-bottom: 1px solid gray;
-}
-
-p {
-	font-family: arial;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 14px;
-}
-
-/*  button */
 
 .button{
-	display: inline-block;
-	padding: 6px;
-	border: 3px solid black;
-	background-image: url(../img/admin/button_bg.png);
-	margin-top: auto;
-	padding-top: 9px;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-	font-family: arial;
-	margin-bottom: 3px;
-	text-transform: uppercase;
-	font-size: 15px;
-	cursor: default;
-	text-decoration: none;
-	letter-spacing: 1px;
-	cursor: pointer;
+    border: 0px;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
 }
 
-h4 img {
-	display: inline;
-}
-.button:hover
-{
-	background-image: url(../img/admin/button_hover.png);
+.button:hover{
+    cursor: pointer;
 }
 
-.version {
-	margin-top: 33px;
-}
-
-.version a {
-	text-decoration: none;
-	font-size: 9px;
+.info{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #222;
+    font-size: 0.7em;
+    display: block;
+    text-align: center;
 }
