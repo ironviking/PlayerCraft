@@ -87,6 +87,7 @@ form {
     font-weight: bold;
     font-size: 1.2em;
     margin-top: 15px;
+    background-color: white;
 }
 
 .button:hover{
