@@ -14,6 +14,12 @@
            <div id="box-top"> 
                  <img class="logo" src="<?=base_url()?>img/admin/medium-logo.png">
             </div>
+            
+            <?php if(!empty($fail) ){?>
+                <div class="failure">
+                    <p><?=$fail?></p>
+                </div>
+            <?php } ?>
 
             <form name="login" method="POST" action="">
                 <p class="label">Username</p>

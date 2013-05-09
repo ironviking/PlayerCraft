@@ -12,8 +12,8 @@ class Login extends CI_Controller {
 		$conf_username = $this->config->item('username');
 		$conf_password = $this->config->item('password');
 		if($conf_username == "" or $conf_password == ""){
-			show_error('Username or password may not be empty <br>Please edit user.php located in application/config');
-		}
+            $data['fail'] = "You may not login until password and/or username has been set";
+        }else{
 
 		$data[''] = "";
 		if(isset($_POST['username'])) {
@@ -27,10 +27,12 @@ class Login extends CI_Controller {
 				header('location: ' . base_url() . 'admin');
 
 			}else {
-				$data['fail'] = true;
+				$data['fail'] = "password and/or username incorrect";
 			}
 
-		}
+        }
+
+        }
 
 		$this->load->view('login-template', $data);
 	}
