@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5 { font-weight: bold; }
 h1 { font-size: 3em;}
 h2 { font-size: 2.5em;}
 h3 { font-size: 2em;}
-h4 { font-size: 1.3em;}
+h4 { font-size: 1.1em;}
 h5 { font-size: 1em;}
 
 body {
@@ -38,7 +38,7 @@ header {
 	display: block;
 	background-color: #7f0000;
 	background-image: url(../img/admin/dirt.png);
-	height: 45px;
+	height: 35px;
 	background-position: bottom;
 	box-shadow: 0px 2px 2px #000;
 	padding-right: 25px;
@@ -49,13 +49,11 @@ a {
 }
 
 header img {
-	padding: 5px;
-	padding-top: -12;
 }
 
 header nav {
 	float: right;
-	padding-top: 12px;
+	padding-top: 9px;
 }
 
 header li {
@@ -63,7 +61,7 @@ header li {
 	list-style: none;
 	font-family: arial;
 	color: white;
-	font-size: 1.1em;
+	font-size: 0.9em;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin-left: 10px;
@@ -86,14 +84,12 @@ header a:hover {
 	border: 1px solid gray;
 	box-shadow: 2px 2px 4px black;
 	padding-bottom: -5px;
+    color: #222;
 }
 
 .section-content {
-	background-color: white;
+    background-color: white;
 	min-height: 400px;
-	background-image: url(../img/admin/creeper.png);
-	background-repeat: no-repeat;
-	background-position: left bottom;
 	z-index: -5000;
 	border-top: 1px solid gray;
 }
@@ -171,6 +167,7 @@ header a:hover {
 	font-weight: bold;
 	text-transform: uppercase;
 	font-family: arial;
+    font-size: 1em;
 }
 
 .page-table  td img{
@@ -180,7 +177,7 @@ header a:hover {
 
 .page-table  td {
 	text-transform: uppercase;
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 
 .page-table a {
