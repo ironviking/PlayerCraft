@@ -21,7 +21,7 @@ class Login extends CI_Controller {
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 
-			if( $username == $conf_username && $password = $_POST['password']){
+			if( $username == $conf_username && $password = $conf_password){
 				$_SESSION['admin'] = true;
 				$_SESSION['user'] = htmlentities(mysql_real_escape_string(stripslashes($_POST['username'])));
 				header('location: ' . base_url() . 'admin');
