@@ -4,7 +4,7 @@
 class Login extends CI_Controller {
 	public function index(){
 		// If user already have admin, redirect to admin panel
-		if(isset($_SESSION['admin'])) {
+		if (isset($_SESSION['admin'])) {
 			header('location: ' .base_url() . 'admin');
 		}
 		
@@ -17,15 +17,15 @@ class Login extends CI_Controller {
 		$conf_password = $this->config->item('password');
 		
 		// Make sure both fields have valid values
-		if($conf_username == "" or $conf_password == ""){
+		if ($conf_username == "" or $conf_password == ""){
             		$data['fail'] = "Invalid user configuration";
         	} else {
-			if(isset($_POST['username'])) {
+			if (isset($_POST['username'])) {
 				$username = $_POST['username'];
 				$password = $_POST['password'];
 				
 				// Check input towards configuration
-				if( $username == $conf_username && $password == $conf_password) {
+				if ($username == $conf_username && $password == $conf_password) {
 					$_SESSION['admin'] = true;
 					$_SESSION['user'] = htmlentities(mysql_real_escape_string(stripslashes($_POST['username'])));
 					header('location: '.base_url().'admin');
